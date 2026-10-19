@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/bg_dark"
+    android:padding="16dp">
+
+    <!-- Top Bar -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:layout_marginBottom="12dp">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/memory_title"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:textColor="@color/neon_cyan" />
+
+        <Button
+            android:id="@+id/btn_add_memory"
+            android:layout_width="wrap_content"
+            android:layout_height="38dp"
+            android:text="Add Memory"
+            android:textSize="12sp"
+            android:backgroundTint="@color/primary_purple"
+            android:textColor="#FFFFFF" />
+    </LinearLayout>
+
+    <!-- Search Input -->
+    <EditText
+        android:id="@+id/et_search_memory"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:background="@drawable/bg_futuristic_card"
+        android:hint="Search memories..."
+        android:textColor="@color/text_primary"
+        android:textColorHint="@color/text_muted"
+        android:paddingHorizontal="14dp"
+        android:textSize="13sp"
+        android:layout_marginBottom="12dp" />
+
+    <!-- List -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_memories"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+    <!-- Empty State -->
+    <TextView
+        android:id="@+id/tv_empty_memory"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/memory_empty"
+        android:textColor="@color/text_muted"
+        android:gravity="center"
+        android:padding="24dp"
+        android:visibility="gone" />
+
+    <!-- Clear All Button -->
+    <Button
+        android:id="@+id/btn_wipe_memories"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:text="@string/memory_clear_all"
+        android:textSize="13sp"
+        android:backgroundTint="@color/bg_card_elevated"
+        android:textColor="@color/color_error"
+        android:layout_marginTop="8dp" />
+
+</LinearLayout>

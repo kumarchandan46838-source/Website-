@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center_horizontal"
+    android:background="@color/bg_dark"
+    android:padding="24dp">
+
+    <!-- Top Status Header -->
+    <TextView
+        android:id="@+id/tv_call_identity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="YESMIN VOICE CALL"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textColor="@color/neon_cyan"
+        android:letterSpacing="0.1"
+        android:layout_marginTop="16dp" />
+
+    <TextView
+        android:id="@+id/tv_call_duration"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="00:00"
+        android:textSize="14sp"
+        android:textColor="@color/text_secondary"
+        android:layout_marginTop="4dp" />
+
+    <!-- Animated Pulsing Voice Avatar View -->
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:gravity="center">
+
+        <com.yesmin.ai.ui.views.PulsingAvatarView
+            android:id="@+id/pulsing_avatar"
+            android:layout_width="260dp"
+            android:layout_height="260dp"
+            android:layout_gravity="center" />
+    </FrameLayout>
+
+    <!-- State Indicator Badge -->
+    <LinearLayout
+        android:id="@+id/badge_state"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:background="@drawable/bg_futuristic_card"
+        android:paddingHorizontal="20dp"
+        android:paddingVertical="8dp"
+        android:layout_marginBottom="16dp">
+
+        <View
+            android:id="@+id/dot_state_color"
+            android:layout_width="10dp"
+            android:layout_height="10dp"
+            android:background="@drawable/bg_circle_avatar"
+            android:layout_marginEnd="10dp" />
+
+        <TextView
+            android:id="@+id/tv_calling_state_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/call_state_listening"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:textColor="@color/neon_cyan" />
+    </LinearLayout>
+
+    <!-- Real-time Subtitles Bubble -->
+    <TextView
+        android:id="@+id/tv_call_subtitles"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:background="@drawable/bg_card_elevated"
+        android:padding="16dp"
+        android:text="@string/call_subtitles_hint"
+        android:textColor="@color/text_primary"
+        android:textSize="14sp"
+        android:gravity="center"
+        android:layout_marginBottom="24dp" />
+
+    <!-- Action Buttons Row (Mute, Interrupt/Barge-in, End Call) -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginBottom="20dp">
+
+        <!-- Mute Button -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:layout_marginEnd="24dp">
+
+            <ImageButton
+                android:id="@+id/btn_call_mute"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:background="@drawable/bg_futuristic_card"
+                android:src="@drawable/ic_mic"
+                app:tint="@color/text_primary"
+                android:contentDescription="Mute" />
+
+            <TextView
+                android:id="@+id/tv_mute_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Mute"
+                android:textSize="12sp"
+                android:textColor="@color/text_secondary"
+                android:layout_marginTop="6dp" />
+        </LinearLayout>
+
+        <!-- Interrupt / Barge-in Button -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:layout_marginEnd="24dp">
+
+            <ImageButton
+                android:id="@+id/btn_call_interrupt"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:background="@drawable/bg_futuristic_card"
+                android:src="@drawable/ic_stop"
+                app:tint="@color/neon_pink"
+                android:contentDescription="Interrupt" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Interrupt"
+                android:textSize="12sp"
+                android:textColor="@color/text_secondary"
+                android:layout_marginTop="6dp" />
+        </LinearLayout>
+
+        <!-- End Call Button -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center">
+
+            <ImageButton
+                android:id="@+id/btn_call_end"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:background="@drawable/bg_neon_button"
+                android:src="@drawable/ic_call_end"
+                app:tint="#FFFFFF"
+                android:contentDescription="End Call" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="End Call"
+                android:textSize="12sp"
+                android:textColor="@color/color_error"
+                android:layout_marginTop="6dp" />
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

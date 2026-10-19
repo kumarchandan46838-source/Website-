@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_dark">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/automation_title"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:textColor="@color/neon_cyan"
+            android:layout_marginBottom="8dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Automate system tasks, apps, YouTube music, alarms, and hands-free control."
+            android:textSize="13sp"
+            android:textColor="@color/text_secondary"
+            android:layout_marginBottom="16dp" />
+
+        <!-- Status Cards -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_futuristic_card"
+            android:orientation="vertical"
+            android:padding="16dp"
+            android:layout_marginBottom="16dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_marginBottom="12dp">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Accessibility Service"
+                    android:textStyle="bold"
+                    android:textColor="@color/text_primary" />
+
+                <Button
+                    android:id="@+id/btn_toggle_accessibility"
+                    android:layout_width="wrap_content"
+                    android:layout_height="36dp"
+                    android:text="Enable"
+                    android:textSize="12sp"
+                    android:backgroundTint="@color/primary_purple" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Notification Listener"
+                    android:textStyle="bold"
+                    android:textColor="@color/text_primary" />
+
+                <Button
+                    android:id="@+id/btn_toggle_notifications"
+                    android:layout_width="wrap_content"
+                    android:layout_height="36dp"
+                    android:text="Enable"
+                    android:textSize="12sp"
+                    android:backgroundTint="@color/neon_pink" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- Command Tester -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="TEST AUTOMATION COMMAND"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            android:textColor="@color/text_muted"
+            android:letterSpacing="0.1"
+            android:layout_marginBottom="8dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="16dp">
+
+            <EditText
+                android:id="@+id/et_automation_cmd"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:layout_weight="1"
+                android:background="@drawable/bg_futuristic_card"
+                android:hint="@string/automation_test_hint"
+                android:textColor="@color/text_primary"
+                android:textColorHint="@color/text_muted"
+                android:paddingHorizontal="14dp"
+                android:textSize="13sp" />
+
+            <Button
+                android:id="@+id/btn_run_automation"
+                android:layout_width="wrap_content"
+                android:layout_height="48dp"
+                android:layout_marginStart="8dp"
+                android:text="Execute"
+                android:background="@drawable/bg_neon_button"
+                android:textColor="#FFFFFF" />
+        </LinearLayout>
+
+        <!-- Quick Automation Actions -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="QUICK SHORTCUTS"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            android:textColor="@color/text_muted"
+            android:letterSpacing="0.1"
+            android:layout_marginBottom="10dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/btn_quick_yt_music"
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:text="Play Trending Songs on YouTube"
+                android:backgroundTint="@color/bg_card_elevated"
+                android:textColor="@color/neon_cyan"
+                android:layout_marginBottom="8dp" />
+
+            <Button
+                android:id="@+id/btn_quick_alarm"
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:text="Set Alarm for 7:00 AM"
+                android:backgroundTint="@color/bg_card_elevated"
+                android:textColor="@color/text_primary"
+                android:layout_marginBottom="8dp" />
+
+            <Button
+                android:id="@+id/btn_quick_settings"
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:text="Open Android System Settings"
+                android:backgroundTint="@color/bg_card_elevated"
+                android:textColor="@color/text_secondary" />
+        </LinearLayout>
+
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>

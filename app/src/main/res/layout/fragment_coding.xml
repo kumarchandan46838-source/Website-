@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_dark">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- Top Title & Termux Button -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="16dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/code_title"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                android:textColor="@color/neon_cyan" />
+
+            <Button
+                android:id="@+id/btn_open_termux_guide"
+                android:layout_width="wrap_content"
+                android:layout_height="38dp"
+                android:text="Termux Guide"
+                android:textSize="12sp"
+                android:backgroundTint="@color/primary_purple"
+                android:textColor="#FFFFFF" />
+        </LinearLayout>
+
+        <!-- Prompt Input -->
+        <EditText
+            android:id="@+id/et_code_prompt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="80dp"
+            android:background="@drawable/bg_futuristic_card"
+            android:hint="@string/code_hint"
+            android:textColor="@color/text_primary"
+            android:textColorHint="@color/text_muted"
+            android:padding="14dp"
+            android:textSize="14sp"
+            android:gravity="top|start"
+            android:layout_marginBottom="12dp" />
+
+        <!-- Language Selector Chips -->
+        <HorizontalScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp">
+
+            <com.google.android.material.chip.ChipGroup
+                android:id="@+id/chip_group_lang"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:singleSelection="true">
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/chip_kotlin"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Kotlin / Android"
+                    android:checked="true" />
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/chip_python"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Python" />
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/chip_java"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Java" />
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/chip_web"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="HTML/JS" />
+            </com.google.android.material.chip.ChipGroup>
+        </HorizontalScrollView>
+
+        <!-- Generate Button -->
+        <Button
+            android:id="@+id/btn_generate_code"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:text="Generate Code"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:background="@drawable/bg_neon_button"
+            android:textColor="#FFFFFF"
+            android:layout_marginBottom="16dp" />
+
+        <!-- Output Code Box & Actions -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="8dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Generated Output:"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:textColor="@color/text_secondary" />
+
+            <Button
+                android:id="@+id/btn_copy_code"
+                android:layout_width="wrap_content"
+                android:layout_height="36dp"
+                android:text="Copy"
+                android:textSize="12sp"
+                android:backgroundTint="@color/bg_card_elevated"
+                android:textColor="@color/neon_cyan"
+                android:layout_marginEnd="8dp" />
+
+            <Button
+                android:id="@+id/btn_export_code"
+                android:layout_width="wrap_content"
+                android:layout_height="36dp"
+                android:text="Save File"
+                android:textSize="12sp"
+                android:backgroundTint="@color/bg_card_elevated"
+                android:textColor="@color/neon_pink" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_code_output"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="160dp"
+            android:background="@drawable/bg_card_elevated"
+            android:padding="16dp"
+            android:fontFamily="monospace"
+            android:textSize="13sp"
+            android:textColor="@color/neon_cyan"
+            android:text="// Code will appear here with complete file paths." />
+
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>

@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Yesmin AI</string>
+    <string name="app_tagline">Your AI Companion &amp; JARVIS Assistant</string>
+    <string name="accessibility_service_desc">Enables Yesmin AI to perform authorized phone actions such as opening apps, navigation, and reading screen content when requested.</string>
+
+    <!-- Navigation -->
+    <string name="nav_home">Home</string>
+    <string name="nav_chat">Chat</string>
+    <string name="nav_calling">Call</string>
+    <string name="nav_code">Code</string>
+    <string name="nav_more">More</string>
+
+    <!-- Dashboard -->
+    <string name="greeting_girlfriend">Hey sweetie, I'm ready! What are we doing today?</string>
+    <string name="status_connected">Gemini Brain Active</string>
+    <string name="status_disconnected">API Key Required in Settings</string>
+    <string name="btn_start_call">Start Voice Call</string>
+    <string name="btn_quick_chat">Open AI Chat</string>
+    <string name="btn_coding_mode">Coding Studio</string>
+    <string name="btn_phone_automation">Phone Automation</string>
+    <string name="btn_memory_bank">Memory Bank</string>
+    <string name="btn_vision_tools">Vision &amp; Tools</string>
+    <string name="btn_settings">Settings</string>
+
+    <!-- Calling Screen -->
+    <string name="call_state_idle">Tap to begin call</string>
+    <string name="call_state_listening">Listening to you...</string>
+    <string name="call_state_thinking">Yesmin is thinking...</string>
+    <string name="call_state_speaking">Yesmin is speaking...</string>
+    <string name="call_mute">Mute</string>
+    <string name="call_interrupt">Interrupt</string>
+    <string name="call_end">End Call</string>
+    <string name="call_subtitles_hint">Conversation will appear here...</string>
+
+    <!-- Chat Screen -->
+    <string name="chat_hint">Talk to Yesmin (Hindi, English, Hinglish)...</string>
+    <string name="chat_send">Send</string>
+    <string name="chat_clear">Clear</string>
+
+    <!-- Coding Screen -->
+    <string name="code_title">Coding Assistant</string>
+    <string name="code_hint">Ask for code, debug errors, or explain architecture...</string>
+    <string name="code_generate">Generate</string>
+    <string name="code_copy">Copy Code</string>
+    <string name="code_export">Save File</string>
+    <string name="code_termux_btn">Termux APK Guide</string>
+
+    <!-- Memory Screen -->
+    <string name="memory_title">Memory System</string>
+    <string name="memory_add">Add Memory</string>
+    <string name="memory_clear_all">Clear All Memories</string>
+    <string name="memory_empty">No memories saved yet. Yesmin remembers your preferences, favorites, and facts!</string>
+
+    <!-- Automation -->
+    <string name="automation_title">Phone Automation</string>
+    <string name="automation_test_hint">Try: "open youtube", "play kesariya", "set alarm for 6 AM"</string>
+
+    <!-- Settings -->
+    <string name="settings_title">Settings &amp; Brain</string>
+    <string name="gemini_api_key_label">Gemini API Key</string>
+    <string name="gemini_api_key_hint">Enter your Google Gemini API Key</string>
+    <string name="btn_test_connection">Test Connection</string>
+    <string name="btn_save_settings">Save Settings</string>
+    <string name="model_selection_label">AI Model</string>
+    <string name="personality_label">Personality Style</string>
+    <string name="voice_pitch_label">Voice Pitch</string>
+    <string name="voice_speed_label">Voice Speed</string>
+</resources>
